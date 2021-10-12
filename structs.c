@@ -2,54 +2,54 @@
 //Program 4
 //4/03/2015
 //Professor ********
-
-#define CRT_SECURE_NO_WARNINGS 1
-#define SIZE 50
-
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-
-typedef struct
-{
-	char shipName[SIZE];
-	char className[SIZE];
-	char shipType[SIZE];
-	double developCost;
-	double shipCost;
-	int commissionYear;
-	int shipID;
-}usNavy;
-
-void Menu(char *choice); //Displays the menu for the user to pick an option and learn how to make a ship ID.
-void HardSix(usNavy list[], int *numentries); //Hard code of all the pre-filled arrays/strings/values.
-void DisplayData(usNavy list[], int *numentries); //Prints the data for the user to see.
-void SaveData(usNavy list[], int *numentries); //Saves the data to a file outside the program. 
-void AddShip(usNavy list[], int *numentries); //Adds a single ship to the program. 
-void DeleteShip(usNavy list[], int *numentries); //Deletes only a single ship in the database.
-void DeleteAll(int *numentries); //Deletes all the database entries in the program. 
-void UpdateShipPrice(usNavy list[], int *numentries); //If the construction price changes, this function will allow the user to modify it.
-void DisplayID(usNavy list[], int *numentries); //Displays only the IDs entered for the ships input into the program. 
-void DisplayAllNames(usNavy list[], int *numentries); //Displays all the names of the ships entered belonging to a particular class.
-
-int main()
-{
-	int numentries = 0;
-	char choice;
-	usNavy list[SIZE] = { "/0" };
-	
-	HardSix(list, &numentries);
-
-	
-	do{
-		Menu(&choice);
-
-		if(toupper(choice) == 'A')
-		{
-			AddShip(list, &numentries);
-		}
-		else if(toupper(choice) == 'D')
-		{
+# - vi_vi_vi=VI<
+#<define CRT_SECURE_NO_WARNINGS 1
+#<define SIZE 50
+<2
+#<include <stdio.h>
+#<include <string.h>
+#<include <ctype.h>
+<2
+#<typedef struct
+#<{
+#	char shipName[SIZE];
+#	char className[SIZE];
+#	char shipType[SIZE];
+#	double developCost;
+#	double shipCost;
+#       int commissionYear;
+#	int shipID;
+#<}usNavy;
+<
+#void Menu(char *choice); //Displays the menu for the user to pick an option and learn how to make a ship ID.
+#void HardSix(usNavy list[], int *numentries); //Hard code of all the pre-filled arrays/strings/values.
+#void DisplayData(usNavy list[], int *numentries); //Prints the data for the user to see.
+#void SaveData(usNavy list[], int *numentries); //Saves the data to a file outside the program. 
+#void AddShip(usNavy list[], int *numentries); //Adds a single ship to the program. 
+#void DeleteShip(usNavy list[], int *numentries); //Deletes only a single ship in the database.
+#void DeleteAll(int *numentries); //Deletes all the database entries in the program. 
+#void UpdateShipPrice(usNavy list[], int *numentries); //If the construction price changes, this function will allow the user to modify it.
+#void DisplayID(usNavy list[], int *numentries); //Displays only the IDs entered for the ships input into the program. 
+#void DisplayAllNames(usNavy list[], int *numentries); //Displays all the names of the ships entered belonging to a particular class.
+<2
+#<int main()
+#<{
+#	int numentries = 0;
+#	char choice	
+#	usNavy list[SIZE] = { "/0" };
+<2	
+#	HardSix(list, &numentries);
+<2
+<2	
+#<	do{
+#		Menu(&choice);
+<2
+#		if(toupper(choice) == 'A')
+#<2		{
+#			AddShip(list, &numentries);
+#<		}
+#		else if(toupper(choice) == 'D')
+#<		{
 			DeleteShip(list, &numentries);
 		}
 		else if(toupper(choice) == 'P')
